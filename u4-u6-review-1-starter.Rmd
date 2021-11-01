@@ -42,7 +42,11 @@ temperature_f <- c(30, 35, 40, 50, 60, 70, 80, 90, 80, 70, 50, 40)
 
 #### Member 2
 
-Add your code here.
+```{r seasons}
+season <- c("winter","winter", "spring", "sping", "spring", "summer", "summer", "summer", "fall", "fall", "fall", "winter")
+
+```
+
 
 #### Member 3
 
