@@ -40,7 +40,11 @@ Add your code here.
 
 #### Member 2
 
-Add your code here.
+```{r seasons}
+season <- c("winter","winter", "spring", "sping", "spring", "summer", "summer", "summer", "fall", "fall", "fall", "winter")
+
+```
+
 
 #### Member 3
 
