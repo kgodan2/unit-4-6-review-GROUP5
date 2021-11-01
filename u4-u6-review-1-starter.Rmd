@@ -77,8 +77,12 @@ ___ <- tibble::tibble(
 
 #### Member 1
 
-Add your code here.
-
+```{r temperature, eval = T}
+temperature <- tibble::tibble(
+  "month_name" = month_name,
+  "temperature" = temperature_f
+)
+```
 #### Member 2
 
 Add your code here.
