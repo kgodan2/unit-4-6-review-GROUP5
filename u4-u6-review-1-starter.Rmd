@@ -104,7 +104,12 @@ month_order <- tibble::tibble(
 
 #### Member 4
 
-Add your code here.
+```{r merge-nba-season, eval = T}
+nba_season <- tibble::tibble(
+  "month_name" = month_name,
+  "nba_season" = nba_season
+)
+```
 
 #### Member 5
 
