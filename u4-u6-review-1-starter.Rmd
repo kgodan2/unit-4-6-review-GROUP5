@@ -48,7 +48,11 @@ Add your code here.
 
 #### Member 4
 
-Add your code here.
+```{r nba-season}
+
+nba_season <- c(TRUE, FALSE, T, 0, "TRUE", FALSE, TRUE, FALSE, TRUE, FALSE, FALSE, TRUE)
+
+```
 
 #### Member 5
 
