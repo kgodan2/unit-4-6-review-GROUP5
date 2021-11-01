@@ -81,7 +81,7 @@ Add your code here.
 
 #### Member 2
 
-```{r merge-season-month}
+```{r merge-season-month, , eval = T}
 month_season <- tibble::tibble(
   "month_name" = month_name,
   "season" = season
