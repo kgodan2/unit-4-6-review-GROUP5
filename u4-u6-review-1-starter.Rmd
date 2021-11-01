@@ -68,10 +68,10 @@ Add your code here.
 
 ## Exercise 2 - Combine into a data frame
 
-```{r merge-two-vectors, eval = F}
-___ <- tibble::tibble(
+```{r merge-two-vectors, eval = T}
+month_order <- tibble::tibble(
   "month_name" = month_name,
-  "___" = ___
+  "month_order" = order
 )
 ```
 
@@ -89,7 +89,12 @@ Add your code here.
 
 #### Member 3
 
-Add your code here.
+```{r merge-two-vectors3}
+month_order <- tibble::tibble(
+  "month_name" = month_name,
+  "month_order" = order
+)
+```
 
 #### Member 4
 
@@ -170,4 +175,4 @@ Add your code here.
 
 #### Member 5
 
-Add your code here.
+Add your code here.                
