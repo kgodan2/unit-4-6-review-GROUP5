@@ -123,7 +123,19 @@ Add your code here.
 
 #### Member 2
 
-Add your code here.
+```{r making-ggplot-ju}
+ggplot(mapping = aes(x= month_name, y= season))+ geom_point()
+
+```
+
+```{r fct-relevel-ju}
+temperature %>%
+mutate( month_name = fct_relevel(month_name, "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")) 
+
+
+
+```
+
 
 #### Member 3
 
