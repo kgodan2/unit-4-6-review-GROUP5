@@ -58,7 +58,7 @@ order <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
 
 ```{r nba-season}
 
-nba_season <- c(TRUE, FALSE, T, 0, "TRUE", FALSE, TRUE, FALSE, TRUE, FALSE, FALSE, TRUE)
+nba_season <- c(TRUE, FALSE, T, 0, TRUE, FALSE, TRUE, FALSE, TRUE, FALSE, FALSE, TRUE)
 
 ```
 
@@ -105,7 +105,7 @@ month_order <- tibble::tibble(
 #### Member 4
 
 ```{r merge-nba-season, eval = T}
-nba_season <- tibble::tibble(
+nba_season_1 <- tibble::tibble(
   "month_name" = month_name,
   "nba_season" = nba_season
 )
@@ -131,7 +131,24 @@ Add your code here.
 
 #### Member 4
 
-Add your code here.
+```{r ggplot-nba-season, eval = T}
+
+nba_season_1$nba_season <- as.numeric(nba_season_1$nba_season)
+  glimpse(nba_season_1) %>% 
+ggplot(mapping = aes(month_name, nba_season)) +
+  geom_point()
+
+```
+
+```{r nba-season-months}
+
+nba_season_1$nba_season <- as.numeric(nba_season_1$nba_season)
+  glimpse(nba_season_1) %>% 
+    mutate(month_name = fct_relevel(month_name, "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")) %>% 
+ggplot(mapping = aes(month_name, nba_season)) +
+  geom_point()
+
+```
 
 #### Member 5
 
