@@ -154,7 +154,7 @@ mutate( month_name = fct_relevel(month_name, "January", "February", "March", "Ap
 
 #### Member 3
 
-```{r sabra-df}
+```{r sabra-df eval=T}
 ggplot(month_order, aes(x=month_name, y=month_order)) +
   geom_point()
 ```
