@@ -119,7 +119,21 @@ Add your code here.
 
 #### Member 1
 
-Add your code here.
+```{r allison-ex3}
+ggplot(temperature, aes(x = month_name, y = temperature)) +
+  geom_point()
+```
+
+The plot has the months in alphabetical order on the x-axis instead of their chronological order.
+
+```{r allison-reorder-ex3}
+temperature %>%
+  mutate(month_name = fct_relevel(month_name, "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")) %>%
+  ggplot(mapping = aes(x = month_name, y = temperature)) +
+  geom_point()
+```
+
+Reordering the levels did fix the problem.
 
 #### Member 2
 
