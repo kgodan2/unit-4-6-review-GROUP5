@@ -131,7 +131,7 @@ Add your code here.
 ggplot(month_order, aes(x=month_name, y=month_order)) +
   geom_point()
 ```
-```{r sabra-relevel-months}
+```{r sabra-relevel-months eval=T}
 month_order %>% 
   mutate(month_name = fct_relevel(month_name, "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")) %>% 
 ggplot(mapping=aes(x=month_name, y = month_order))+
