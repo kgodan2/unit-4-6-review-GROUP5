@@ -43,7 +43,7 @@ temperature_f <- c(30, 35, 40, 50, 60, 70, 80, 90, 80, 70, 50, 40)
 #### Member 2
 
 ```{r seasons}
-season <- c("winter","winter", "spring", "sping", "spring", "summer", "summer", "summer", "fall", "fall", "fall", "winter")
+season <- c("winter","winter", "spring", "spring", "spring", "summer", "summer", "summer", "fall", "fall", "fall", "winter")
 
 ```
 
@@ -144,7 +144,8 @@ ggplot(mapping = aes(x= month_name, y= season))+ geom_point()
 
 ```{r fct-relevel-ju}
 temperature %>%
-mutate( month_name = fct_relevel(month_name, "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")) 
+mutate( month_name = fct_relevel(month_name, "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"))%>% 
+  ggplot(mapping = aes(x= month_name, y= season))+ geom_point()
 
 
 
