@@ -43,7 +43,7 @@ temperature_f <- c(30, 35, 40, 50, 60, 70, 80, 90, 80, 70, 50, 40)
 #### Member 2
 
 ```{r seasons}
-season <- c("winter","winter", "spring", "sping", "spring", "summer", "summer", "summer", "fall", "fall", "fall", "winter")
+season <- c("winter","winter", "spring", "spring", "spring", "summer", "summer", "summer", "fall", "fall", "fall", "winter")
 
 ```
 
@@ -119,15 +119,54 @@ Add your code here.
 
 #### Member 1
 
-Add your code here.
+```{r allison-ex3}
+ggplot(temperature, aes(x = month_name, y = temperature)) +
+  geom_point()
+```
+
+The plot has the months in alphabetical order on the x-axis instead of their chronological order.
+
+```{r allison-reorder-ex3}
+temperature %>%
+  mutate(month_name = fct_relevel(month_name, "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")) %>%
+  ggplot(mapping = aes(x = month_name, y = temperature)) +
+  geom_point()
+```
+
+Reordering the levels did fix the problem.
 
 #### Member 2
 
-Add your code here.
+```{r making-ggplot-ju}
+ggplot(mapping = aes(x= month_name, y= season))+ geom_point()
+
+```
+
+```{r fct-relevel-ju}
+temperature %>%
+mutate( month_name = fct_relevel(month_name, "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"))%>% 
+  ggplot(mapping = aes(x= month_name, y= season))+ geom_point()
+
+
+
+```
+
 
 #### Member 3
 
-Add your code here.
+```{r sabra-df eval=T}
+ggplot(month_order, aes(x=month_name, y=month_order)) +
+  geom_point()
+```
+
+```{r sabra-relevel-months}
+month_order %>% 
+  mutate(month_name = fct_relevel(month_name, "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")) %>% 
+ggplot(mapping=aes(x=month_name, y = month_order))+
+  geom_point()
+
+```
+
 
 #### Member 4
 
